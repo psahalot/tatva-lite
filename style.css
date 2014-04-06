@@ -1018,7 +1018,8 @@ select {
         text-align: center;
 }
 
-#home-testimonial .testimonials-list blockquote {
+#home-testimonial .testimonials-list blockquote,
+#home-testimonial .testimonials-list blockquote p {
         font-size: 30px;
         font-size: 3rem;
         font-weight: 300;
@@ -1027,7 +1028,7 @@ select {
         margin-left: 0;     
 }
 
-#home-testimonial .testimonials-list .avatar-link img {
+#home-testimonial .testimonials-list .avatar {
         border-radius: 100px; 
 }
 
