@@ -9,6 +9,12 @@
 require( get_stylesheet_directory() . '/inc/customizer.php' ); // new customizer options
 include( get_stylesheet_directory() . '/inc/edd-config.php' ); // EDD config file 
 
+
+/**
+ * Add support for a custom header image.
+ */
+require( get_template_directory() . '/inc/custom-header.php' );
+
 /* Include plugin activation file to install plugins */
 include get_template_directory() . '/inc/plugin-activation/plugin-details.php';
 
@@ -81,24 +87,6 @@ if ( ! function_exists( 'tatva_setup' ) ) {
 				// Background image default
 				'default-image' => ''
                                 
-			) );
-
-		// Enable support for Custom Headers (or in our case, a custom logo)
-		add_theme_support( 'custom-header', array(
-				// Header image default
-				'default-image' => '',
-				// Header text display default
-				'header-text' => true,
-				// Header text color default
-				'default-text-color' => '000',
-				// Flexible width
-				'flex-width' => true,
-				// Header image width (in pixels)
-				'width' => 300,
-				// Flexible height
-				'flex-height' => true,
-				// Header image height (in pixels)
-				'height' => 80
 			) );
 
 	}

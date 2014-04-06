@@ -7,15 +7,18 @@
  * @package Tatva
  * @since Tatva 1.0
  */
-?><!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" <?php language_attributes(); ?>> <![endif]-->
-<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+?>
 <!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
-
-
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" <?php language_attributes(); ?>>
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" <?php language_attributes(); ?>>
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html <?php language_attributes(); ?>>
+<!--<![endif]-->
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
@@ -44,24 +47,19 @@
 	<div id="headercontainer">
 
 		<header id="masthead" class="site-header row" role="banner">
-			<div class="col grid_6_of_12 site-title">
-				<h1>
+			<div class="col grid_6_of_12">
+				<h1 class="site-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home">
-						<?php 
-						$headerImg = get_header_image();
-						if( !empty( $headerImg ) ) { ?>
-							<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-						<?php } 
-						else {
-							echo get_bloginfo( 'name' );
-						} ?>
+                                            <?php echo get_bloginfo( 'name' ); ?>	
 					</a>
 				</h1>
                                 <p class="site-description"> 
-                                    <?php if (empty($headerImg)) { 
-                                            echo get_bloginfo('description'); 
-                                    } ?>
+                                    <?php  echo get_bloginfo('description'); ?>
                                 </p>
+                                
+                                <?php if ( get_header_image() ) : ?>
+                                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
+                                <?php endif; ?>
 			</div> <!-- /.col.grid_6_of_12 -->
                         
                         <div class="col grid_6_of_12 header-extras last">                        
