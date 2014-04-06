@@ -1,6 +1,6 @@
 === Tatva ===
 Contributors: Puneet Sahalot
-Author URI: http://ideaboxcretaions.com
+Author URI: http://ideaboxthemes.com
 Tags: black, gray, dark, light, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 3.6
 Tested up to: 3.8
@@ -8,19 +8,16 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Tatva is your basic building block for creating beautiful, responsive custom themes. It's not a convoluted or confusing framework that's hard to learn or even harder to modify. It's a simple and elegant starter theme built on HTML5 & CSS3. Its base is a responsive, 12 column grid. It incorporates custom Theme Options that are easy to modify, a set of common templates, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font.
+Tatva is a mobile responsive WordPress theme with support for Easy Digital Downloads plugin. So you can setup a simple business webiste or even integrate an online store for selling digital products. It incorporates multiple color schemes and layouts via Theme Customizer that are easy to modify, a set of common templates, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font.
 
 
 == Description ==
 
-Tatva is your basic building block for creating beautiful, responsive custom themes. It has been built only with
+Tatva is a mobile responsive WordPress theme creating beautiful, responsive websites. It has been built only with
 required features and options. There are no confusing theme options and settings. Simply install and activate the theme.
 Front page is completely widgetized so it gives the users complete control over the content. 
 There's built in support for Easy Digital Downloads plugin which allows users to setup their online store and
 start selling digital products easily. 
-
-Its base is a responsive, 12 column grid. It uses Normalize to make sure that browsers render all elements more consistently and Mordernizr for
-detecting HTML5 and CSS3 browser capabilities along with some default stylings from HTML5 Boilerplate.
 
 It uses Theme customizer to implement all theme customization features. 
 as well as the gorgeous [Font Awesome](http://fortawesome.github.io/Font-Awesome/) icon font by Dave Gandy.
