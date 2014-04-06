@@ -1,0 +1,466 @@
+/*
+Theme Name: Tatva
+Theme URI: http://ideaboxthemes.com/themes/tatva-wordpress-theme/
+Author: IdeaBox Themes
+Author URI: http://ideaboxthemes.com/
+Description: Adding support for languages written in right to left (RTL) format.
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+For more information please visit: http://codex.wordpress.org/Right_to_Left_Language_Support
+*/
+
+/* ==========================================================================
+   Column & Row Setup
+   ========================================================================== */
+
+.col {
+    float:right;
+    margin: 0 1.6% 0 0;
+}
+
+/* Remove the margin on the first column. Works on all browsers incl. IE7+ */
+.col:first-child { margin-right: 0; }
+
+.row {
+    clear: both;
+    margin: 0 auto;
+    *zoom: 1;
+}
+
+body { 
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+
+.alignleft {
+    float: right;
+    margin: 0 0px 16px 20px;
+    margin: 0 0rem 1.6rem 2rem;
+}
+
+.alignright {
+    float: left;
+    margin: 0 20px 16px 0px;
+    margin: 0 2rem 1.6rem 0rem;
+}
+
+blockquote {
+    border-left: 5px solid #666;
+    margin: 0 0 18px 20px;
+    margin: 0 0 1.8rem 2rem;
+    padding: 0 0 0 16px;
+    padding: 0 0 0 1.6rem;
+}
+
+blockquote.pull-right {
+    border-right: 0 none;
+    border-left: 5px solid #666;
+    margin: 0 0px 18px 20px;
+    margin: 0 0rem 1.8rem 2rem;
+    padding: 0 0px 0 16px;
+    padding: 0 0rem 0 1.6rem;
+}
+
+
+blockquote.pull-right p, blockquote.pull-right small {
+    text-align: left;
+}
+
+
+caption,
+th,
+td {
+    text-align: right;
+}
+
+.btn:first-child {
+    *margin-right: 0;
+}
+
+
+/* ==========================================================================
+   Site specific styles
+   ========================================================================== */
+
+#wrapper {
+    text-align: right;
+}
+
+.header-extras{
+    text-align: left;
+}
+
+.home-sidebar .home-theme-features .fa {
+    margin-right: 0px; 
+    margin-left: 10px; 
+}
+
+#home-testimonial .testimonials-list blockquote {
+    border: none; 
+    margin-right: 0;     
+}
+
+/* Home page products grid */
+
+
+.home-product:nth-of-type(3n+1) {
+    margin-right: 0;
+}
+
+
+.home-product-info .product-details-link {
+    float: left;  
+}
+
+
+/* ================================
+* Featured posts on front page 
+================================== */
+
+.home-featured-post:nth-of-type(4n+1) {
+    margin-right: 0;
+}
+
+
+.feature-more-link {
+    left: 0; 
+}
+
+.tatva-front-page .site-content article {
+    margin-left: 0;
+}
+
+/* Social Media icons */
+.social-media-icons {
+    float: left;
+}
+
+
+.social-media-icons li {
+    margin: 0.1em 0.6em 0 0;
+    text-align: right;
+}
+
+
+/* ==========================================================================
+   Main Content
+   ========================================================================== */
+
+.main-content {
+    padding: 20px 20px 20px 30px; 
+    padding: 2rem 2rem 2rem 3rem; 
+}
+
+
+.comments-link {
+    float: left;
+}
+
+.entry-content:after { clear: both; }
+
+.post-categories a,
+.post-tags a {
+    margin: 0 0 0 3px;
+    margin: 0 0 0 0.3rem;
+}
+
+.entry-header time,
+.entry-header address {
+    margin: 0 0 0 20px;
+    margin: 0 0 0 2rem;
+}
+
+
+.page-links .page-numbers {
+    margin-right: 10px; 
+    margin-right: 1rem; 
+}
+
+.author-avatar {
+    float: right;
+}
+
+.author-description {
+    float: left;
+}
+
+.site-content article {
+    margin-right: 0; 
+}
+
+/* ==========================================================================
+   Post Formats
+   ========================================================================== */
+
+/* Quote */
+.format-quote .entry-content blockquote:before {
+    right: 0;
+    left: auto;
+}
+
+.format-quote .entry-content blockquote {
+    margin-right: 40px;
+    margin-right: 4rem;
+}
+
+
+/* ==========================================================================
+   EDD Store Template
+   ========================================================================== */
+
+.store-product:nth-of-type(3n+1) {
+    margin-right: 0;
+}
+.pagination
+{
+    padding: 2rem 4rem 2rem 3rem;
+}
+
+
+/* ==========================================================================
+   Comments
+   ========================================================================== */
+
+.comments-area article header img {
+    float: right;
+}
+
+.comments-area article header cite,
+.comments-area article header time {
+    margin-right: 84px;
+    margin-right: 8.4rem;
+    margin-left: 0;
+}
+
+.comments-area article header h4 {
+    left: 0;
+    right: auto; 
+}
+
+.comments-area li.bypostauthor cite span {
+    margin-right: 6px;
+    margin-right: 0.6rem;
+    margin-left: 0; 
+}
+
+.commentlist {
+    padding-right: 0;
+}
+
+
+form label.error {
+    border-right: 4px solid #bb0504;
+    border-left: none; 
+}
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+.sidebar{
+    padding:40px 0px 0 30px;
+    padding:4rem 0rem 0 3rem;
+}
+
+.sidebar .widget ul {
+    padding-right:0; 
+}
+
+/* ==========================================================================
+   Widgets
+   ========================================================================== */
+
+.widget-area ul {
+    padding-right: 0;
+}
+
+.widget select {
+    margin-right: 1px;
+    margin-right: 0.1rem;
+    margin-left: 0;
+}
+
+.widget-area .widget ul ul {
+    margin-right: 12px;
+    margin-right: 1.2rem;
+    margin-left: 0; 
+}
+
+.widget_recent_entries .post-date,
+.widget_rss .rss-date {
+    margin-right: 12px;
+    margin-right: 1.2rem;
+    margin-left: 0;
+}
+
+#wp-calendar caption {
+    text-align: right;
+}
+
+#wp-calendar #next {
+    padding-left: 24px;
+    padding-left: 2.4rem;
+    padding-right: 0;
+    text-align: left;
+}
+
+.widget_twitter .timesince {;
+    text-align: left;
+}
+
+
+/* ==========================================================================
+   Content Navigation
+   ========================================================================== */
+
+.nav-previous,
+.previous-image {
+    float: right;
+}
+
+.nav-next,
+.next-image {
+    float: left;
+    text-align: left;
+}
+
+.nav-single + .comments-area,
+#comment-nav-above {
+    margin: 48px 0px 48px 48px;
+    margin: 4.8rem 0 4.8rem 4.8rem;
+}
+
+/* ==========================================================================
+   Main Navigation
+   ========================================================================== */
+
+.main-navigation {
+    text-align: right;
+}
+
+
+.main-navigation li {
+    float: right;
+    margin: 0 20px 0 0px; /* Margin on the right side of each top level menu item (since it's floated right) */
+    margin: 0 2rem 0 0;
+}
+
+.main-navigation ul ul {
+    left: auto;
+    right: 0;
+}
+
+.main-navigation ul ul ul {
+    right: 100%;
+    left: auto;
+}
+
+/* ==========================================================================
+   Social Links Navigation - Intelligence overloaded. Thanks to Justin Tadlock 
+   ========================================================================== */
+
+.screen-reader-text {
+    top:      9999em;
+    right:     9999em;
+    left: auto; 
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+/*  Breakpoints are set based on the design, not based on device sizes */
+@media only screen and (max-width: 1100px) {
+
+}
+
+@media only screen and (max-width: 980px) {
+    
+}
+
+@media only screen and (max-width: 900px) {
+   
+}
+
+@media only screen and (max-width: 800px) {
+
+    
+    header .grid_7_of_12 {
+        margin-left: 1.6%; 
+        margin-right: 0;
+    }
+    .main-navigation .nav-menu > li:first-child {
+        margin-right: 0;
+    }
+    .social-media-icons {
+        text-align: right;
+    }
+    .social-media-icons li {
+        margin: 0.1em 0em 0 0.5em;
+    }
+    
+    .home-sidebar .col:nth-of-type(2n+1){
+        margin-left:1.6%;
+        margin-right: 0; 
+    }
+
+
+}
+
+/*  Go full Width at less than 650px */
+@media only screen and (max-width: 650px) {
+   
+
+    #home-widget1,
+    #home-widget2,
+    #home-widget3,
+    #home-widget4{
+        width:48%;
+        margin:0 2% 20px auto !important;
+    }
+
+    .full-width .main-content{
+        padding-right:2rem;
+    }
+
+    .full-width.page-template-page-templatesedd-store-php .main-content{
+        padding-right:0;
+    }
+
+}
+
+
+/*  Adjust the menu at less than 520px */
+@media only screen and (max-width: 520px) {
+    
+    .main-navigation ul ul li ul {
+        right: 0;
+        left: auto; 
+    }
+    .main-navigation ul ul a {
+        color: #fff; /* Nav bar dropdown link color */
+        width: 100%; /* Nav bar dropdown width */
+    }
+    .social-media-icons {
+        text-align: center;
+    }
+
+    .home-product,
+    .home-featured-post,
+    #home-widget1,
+    #home-widget2,
+    #home-widget3,
+    #home-widget4,
+    .store-product{
+        width:100%;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+    .author-description {
+        float: right;
+    }
+}
