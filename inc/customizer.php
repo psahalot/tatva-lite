@@ -206,14 +206,7 @@ function tatva_customize_register($wp_customize) {
             'settings' => 'tatva_store_archive_count',
             'priority' => 40,
         ));
-        // show comments on downloads?
-        $wp_customize->add_setting('tatva_download_comments', array('default' => 0));
-        $wp_customize->add_control('tatva_download_comments', array(
-            'label' => __('Comments on Downloads?', 'tatva'),
-            'section' => 'tatva_edd_options',
-            'priority' => 50,
-            'type' => 'checkbox',
-        ));
+        
 
         /* ========================================================= */
         // Add new section for EDD featured products on Front Page
