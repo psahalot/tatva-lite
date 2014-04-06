@@ -262,7 +262,7 @@ function tatva_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('tatva_footer_footer_text', array(
-        'default' => '',
+        'default' => null,
     ));
     $wp_customize->add_control(new tatva_customize_textarea_control($wp_customize, 'tatva_footer_footer_text', array(
         'section' => 'tatva_footer', // id of section to which the setting belongs
@@ -282,16 +282,7 @@ function tatva_customize_register($wp_customize) {
         'section' => 'tatva_custom_css', // id of section to which the setting belongs
         'settings' => 'tatva_custom_css', 
     )));
-
-    // Add new section for pro version 
-    $wp_customize->add_section('tatva_theme_pro_version_settings', array(
-        'title' => __('Upgrade to Pro Version', 'tatva'),
-        'priority' => 100,
-        'description' => __('Get premium features like unlimited responsive sliders, multiple galleries, full width and boxed laoyout options. Upgrade to Pro Version.','tatva'),
-    ));
     
-     $wp_customize->add_setting('tatva_theme_pro_version_settings');
-     
     // Add postMessage for EDD store title and description
     $wp_customize->get_setting('tatva_edd_store_archives_title')->transport = 'postMessage';
     $wp_customize->get_setting('tatva_edd_store_archives_description')->transport = 'postMessage';
