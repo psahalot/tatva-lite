@@ -62,10 +62,6 @@ function tatva_customize_register($wp_customize) {
 
     }
 
-    
-    // Rename the label to "Display Site Title & Tagline" in order to make this option extra clear.
-    $wp_customize->get_control('display_header_text')->label = __('Display Site Title &amp; Tagline', 'tatva');
-
 
     // Add new section for theme layout and color schemes
     $wp_customize->add_section('tatva_theme_layout_settings', array(
@@ -287,6 +283,15 @@ function tatva_customize_register($wp_customize) {
         'settings' => 'tatva_custom_css', 
     )));
 
+    // Add new section for pro version 
+    $wp_customize->add_section('tatva_theme_pro_version_settings', array(
+        'title' => __('Upgrade to Pro Version', 'tatva'),
+        'priority' => 100,
+        'description' => __('Get premium features like unlimited responsive sliders, multiple galleries, full width and boxed laoyout options. Upgrade to Pro Version.','tatva'),
+    ));
+    
+     $wp_customize->add_setting('tatva_theme_pro_version_settings');
+     
     // Add postMessage for EDD store title and description
     $wp_customize->get_setting('tatva_edd_store_archives_title')->transport = 'postMessage';
     $wp_customize->get_setting('tatva_edd_store_archives_description')->transport = 'postMessage';
