@@ -6,8 +6,8 @@
  * @since Tatva 1.0
  */
 
-require( get_stylesheet_directory() . '/inc/customizer.php' ); // new customizer options
-include( get_stylesheet_directory() . '/inc/edd-config.php' ); // EDD config file 
+require( get_template_directory() . '/inc/customizer.php' ); // new customizer options
+include( get_template_directory() . '/inc/edd-config.php' ); // EDD config file 
 
 
 /**
@@ -15,8 +15,6 @@ include( get_stylesheet_directory() . '/inc/edd-config.php' ); // EDD config fil
  */
 require( get_template_directory() . '/inc/custom-header.php' );
 
-/* Include plugin activation file to install plugins */
-include get_template_directory() . '/inc/plugin-activation/plugin-details.php';
 
 /**
  * Set the content width based on the theme's design and stylesheet.
