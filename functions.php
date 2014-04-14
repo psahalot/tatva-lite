@@ -7,7 +7,6 @@
  */
 
 require( get_template_directory() . '/inc/customizer.php' ); // new customizer options
-include( get_template_directory() . '/inc/edd-config.php' ); // EDD config file 
 
 
 /**
