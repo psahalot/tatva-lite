@@ -62,7 +62,7 @@
                                 <?php endif; ?>
 			</div> <!-- /.col.grid_6_of_12 -->
                         
-                        <div class="col grid_6_of_12 header-extras last">                        
+                        <div class="col grid_6_of_12 header-extras last"> 
                             <?php dynamic_sidebar('header-widget'); ?>
                          </div><!-- /.header-extras -->
 		</header> <!-- /#masthead.site-header.row -->
