@@ -9,6 +9,10 @@
 require( get_template_directory() . '/inc/customizer.php' ); // new customizer options
 
 
+/* Include plugin activation file to install plugins */
+include get_template_directory() . '/inc/plugin-activation/plugin-details.php';
+
+
 /**
  * Add support for a custom header image.
  */
@@ -172,7 +176,7 @@ add_filter( 'mce_css', 'tatva_mce_css' );
 add_filter('body_class','tatva_class_names');
 function tatva_class_names($classes) {
     
-        if ( is_page_template( 'page-templates/front-page.php' )) {
+        if ( is_front_page()) {
             $classes[] = 'tatva-front-page';
         }
         
