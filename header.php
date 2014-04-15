@@ -1,4 +1,6 @@
 <?php
+global $edd_options; 
+
 /**
  * The Header for our theme.
  *
@@ -63,6 +65,13 @@
 			</div> <!-- /.col.grid_6_of_12 -->
                         
                         <div class="col grid_6_of_12 header-extras last"> 
+                            <?php if (class_exists('Easy_Digital_Downloads')) { ?>
+                            <span id="header-cart">
+                                <a href="<?php echo get_permalink($edd_options['purchase_page']); ?>">
+                                    <i class="fa fa-shopping-cart"></i> <?php _e('Cart','tatva'); ?> (<span class="header-cart edd-cart-quantity"><?php echo edd_get_cart_quantity(); ?></span>)
+                                </a>
+                            </span>
+                            <?php } ?>
                             <?php dynamic_sidebar('header-widget'); ?>
                          </div><!-- /.header-extras -->
 		</header> <!-- /#masthead.site-header.row -->
@@ -70,9 +79,9 @@
                 <div class="nav-container">
                     <nav id="site-navigation" class="main-navigation" role="navigation">
                             <div class="col grid_12_of_12">
-					<h3 class="menu-toggle assistive-text"><?php esc_html_e( 'Menu', 'tatva' ); ?></h3>
-					<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tatva' ); ?>"><?php esc_html_e( 'Skip to content', 'tatva' ); ?></a></div>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+                                <h3 class="menu-toggle assistive-text"><?php esc_html_e( 'Menu', 'tatva' ); ?></h3>
+                                <div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tatva' ); ?>"><?php esc_html_e( 'Skip to content', 'tatva' ); ?></a></div>
+                                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
                             </div>
                     </nav> <!-- /.site-navigation.main-navigation -->
                 </div><!-- /.nav-container -->
