@@ -363,9 +363,7 @@ function tatva_scripts_styles() {
 
 	// Register and enqueue our icon font
 	// We're using the awesome Font Awesome icon font. http://fortawesome.github.io/Font-Awesome
-	wp_register_style( 'fontawesome', trailingslashit( get_template_directory_uri() ) . 'assets/css/font-awesome.min.css' , array(), '4.0.3', 'all' );
-	wp_enqueue_style( 'fontawesome' );
-;
+	wp_enqueue_style( 'fontawesome', trailingslashit( get_template_directory_uri() ) . 'assets/css/font-awesome.min.css' , array(), '4.0.3', 'all' );
 
 	/*
 	 * Load our Google Fonts.
@@ -390,9 +388,8 @@ function tatva_scripts_styles() {
 	 */
 
 	// Load Modernizr at the top of the document, which enables HTML5 elements and feature detects
-	wp_register_script( 'modernizr', trailingslashit( get_template_directory_uri() ) . 'assets/js/modernizr-2.7.1-min.js', array(), '2.7.1', false );
-	wp_enqueue_script( 'modernizr' );
-
+	wp_enqueue_script( 'modernizr', trailingslashit( get_template_directory_uri() ) . 'assets/js/modernizr-2.7.1-min.js', array(), '2.7.1', false );
+	
 	// Adds JavaScript to pages with the comment form to support sites with threaded comments (when in use)
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -415,8 +412,8 @@ function tatva_scripts_styles() {
 	}
 
 	// Include this script to envoke a button toggle for the main navigation menu on small screens
-	wp_register_script( 'small-menu', trailingslashit( get_template_directory_uri() ) . 'assets/js/small-menu.js', array( 'jquery' ), '20130130', true );
-	wp_enqueue_script( 'small-menu' );
+	wp_enqueue_script( 'small-menu', trailingslashit( get_template_directory_uri() ) . 'assets/js/navigation.js', array( 'jquery' ), '20130130', true );
+	
 
 }
 add_action( 'wp_enqueue_scripts', 'tatva_scripts_styles' );
@@ -875,16 +872,6 @@ add_filter( 'meta_content', 'wpautop' );
 add_filter( 'meta_content', 'shortcode_unautop'  );
 
 
-add_action( 'after_setup_theme', 'tgm_envira_define_license_key' );
-function tgm_envira_define_license_key() {
-    
-    // If the key has not already been defined, define it now.
-    if ( ! defined( 'ENVIRA_LICENSE_KEY' ) ) {
-        define( 'ENVIRA_LICENSE_KEY', 'f21b503f7793be583daab680a7f8bda7' );
-    }
-    
-}
-
 add_filter('body_class', 'tatva_body_classes');
 function tatva_body_classes($classes) {
     
@@ -902,3 +889,22 @@ function tatva_body_classes($classes) {
     return $classes; 
     
 }
+
+/*
+ * Check if the front page is set 
+ * to display latest blog posts
+ * or a static front page
+ * 
+ * If it's set to display blog posts
+ * then ignore the front-page.php 
+ * template and head over to index.php
+ * 
+ * @Credits Chip Bennett 
+ * 
+ * @since Tatva 1.2
+ */
+
+function tatva_filter_front_page_template( $template ) {
+    return is_home() ? 'index.php' : $template;
+}
+add_filter( 'front_page_template', 'tatva_filter_front_page_template' );
