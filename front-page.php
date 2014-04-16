@@ -18,7 +18,6 @@
 get_header();
 ?>
 
-
 <div id="bannercontainer">
 
     <div class="banner row">
