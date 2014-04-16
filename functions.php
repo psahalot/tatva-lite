@@ -907,4 +907,4 @@ function tatva_body_classes($classes) {
 function tatva_filter_front_page_template( $template ) {
      return is_home() ? '' : $template ;
 }
-add_filter( 'front_page_template', 'tatva_filter_front_page_template' );
+add_filter( 'frontpage_template', 'tatva_filter_front_page_template' );
