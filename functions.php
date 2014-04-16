@@ -94,12 +94,6 @@ if ( ! function_exists( 'tatva_setup' ) ) {
 }
 add_action( 'after_setup_theme', 'tatva_setup' );
 
-
-function tatva_filter_front_page_template( $template ) {
-     return is_home() ? '' : $template ;
-}
-add_filter( 'front_page_template', 'tatva_filter_front_page_template' );
-
 /**
  * Returns the Google font stylesheet URL, if available.
  *
@@ -908,3 +902,9 @@ function tatva_body_classes($classes) {
  * 
  * @since Tatva 1.2
  */
+
+
+function tatva_filter_front_page_template( $template ) {
+     return is_home() ? '' : $template ;
+}
+add_filter( 'front_page_template', 'tatva_filter_front_page_template' );
