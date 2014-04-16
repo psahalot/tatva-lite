@@ -80,7 +80,6 @@ global $edd_options;
                     <nav id="site-navigation" class="main-navigation" role="navigation">
                             <div class="col grid_12_of_12">
                                 <h3 class="menu-toggle assistive-text"><?php esc_html_e( 'Menu', 'tatva' ); ?></h3>
-                                <div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tatva' ); ?>"><?php esc_html_e( 'Skip to content', 'tatva' ); ?></a></div>
                                 <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
                             </div>
                     </nav> <!-- /.site-navigation.main-navigation -->
