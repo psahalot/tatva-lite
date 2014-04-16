@@ -546,12 +546,12 @@ input[type="submit"] {
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.25;
-	color: #333333;
+	color: #fff;
 	text-align: center;
 	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
 	vertical-align: middle;
 	cursor: pointer;
-	background-color: #f5f5f5;
+	background-color: #333;
 	*background-color: #e6e6e6;
 	background-repeat: repeat-x;
 	border: 1px solid #cccccc;
@@ -570,7 +570,7 @@ input[type="submit"] {
 }
 
 .menu-toggle, a.btn {
-	color: #333333;
+	color: #fff;
 	text-decoration: none;
 }
 
@@ -2562,6 +2562,7 @@ li span.dots {
 
 .main-navigation ul ul a:hover {
 	color: #42A2CE; /* Nav bar dropdown link color on hover */
+	background:#fff;
 }
 
 .main-navigation ul li:hover > ul {
@@ -2595,12 +2596,22 @@ li span.dots {
 /* Small menu toggle for mobile devices */
 .menu-toggle {
 	cursor: pointer;
+	color:#fff;
 }
 
 .main-small-navigation .nav-menu {
 	display: none;
 }
 
+.main-navigation li ul li a {
+		border-bottom: 1px solid #ededed;
+		display: block;
+		font-size: 14px;
+		line-height: 2;
+		padding: 12px 10px;
+		white-space: normal;
+		color: #fff;
+}
 
 /* ==========================================================================
    Social Links Navigation - Intelligence overloaded. Thanks to Justin Tadlock 
@@ -3314,6 +3325,52 @@ img#wpstats {
             width:100%;
             margin:0 auto 20px !important;
         }
+		
+		.assistive-text {
+			position: relative !important;
+		}
+		
+		.menu-toggle {
+			display: block;
+			border-radius: 0px;
+			border:none;
+		}
+		
+		.main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
+			display: none;
+		}
+		
+		.main-navigation {
+			width: 100%;
+			padding: 0;
+		}
+		
+		.main-navigation ul.nav-menu.toggled-on {
+			display: block;
+		}
+		
+		.main-navigation li {
+			margin: 0px;
+			font-size: 14px;
+			line-height: 1.42857143;
+			float: left;
+			width: 50%;
+			border-right: 1px solid #ccc;
+		}
+		
+		.main-navigation a {
+			text-align: center;
+		}
+		
+		.main-navigation li ul li {
+			width: 100%;
+			border-left: 20px solid #111;
+		}
+		
+		.main-navigation ul ul,
+		.main-navigation li ul li a {
+			width: 100%;
+		}
         
 }
 
@@ -3359,10 +3416,7 @@ img#wpstats {
         .nav-menu {
                 text-align: center;
         }
-        .main-navigation li {
-                float: none;
-                display: inline-block; 
-        }
+       
         #bannercontainer {
                 margin-top: 0px; 
         }

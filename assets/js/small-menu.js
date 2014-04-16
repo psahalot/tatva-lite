@@ -1,42 +1,40 @@
 /**
- * Handles toggling the main navigation menu for small screens.
- * And also adds a custom CSS class to main navigation if page scrolls more than 100px 
+ * navigation.js
+ *
+ * Handles toggling the navigation menu for small screens.
  */
+( function() {
+	var nav = document.getElementById( 'site-navigation' ), button, menu;
+	if ( ! nav )
+		return;
+	button = nav.getElementsByTagName( 'h3' )[0];
+	menu   = nav.getElementsByTagName( 'ul' )[0];
+	if ( ! button )
+		return;
 
-jQuery( document ).ready( function( $ ) {
-	var $masthead = $( '#masthead' ),
-	    timeout = false;
+	// Hide button if menu is missing or empty.
+	if ( ! menu || ! menu.childNodes.length ) {
+		button.style.display = 'none';
+		return;
+	}
 
-	$.fn.smallMenu = function() {
-		$masthead.find( '#site-navigation' ).removeClass( 'main-navigation' ).addClass( 'main-small-navigation' );
-		$masthead.find( '#site-navigation h3' ).removeClass( 'assistive-text' ).addClass( 'menu-toggle' );
+	button.onclick = function() {
+		if ( -1 == menu.className.indexOf( 'nav-menu' ) )
+			menu.className = 'nav-menu';
 
-		$( '.menu-toggle' ).unbind( 'click' ).click( function() {
-			$masthead.find( '.nav-menu' ).toggle();
-			$( this ).toggleClass( 'toggled-on' );
-		} );
+		if ( -1 != button.className.indexOf( 'toggled-on' ) ) {
+			button.className = button.className.replace( ' toggled-on', '' );
+			menu.className = menu.className.replace( ' toggled-on', '' );
+		} else {
+			button.className += ' toggled-on';
+			menu.className += ' toggled-on';
+		}
 	};
+} )();
 
-	// Check viewport width on first load.
-	if ( $( window ).width() < 520 )
-		$.fn.smallMenu();
 
-	// Check viewport width when user resizes the browser window.
-	$( window ).resize( function() {
-		var browserWidth = $( window ).width();
-
-		if ( false !== timeout )
-			clearTimeout( timeout );
-
-		timeout = setTimeout( function() {
-			if ( browserWidth < 520 ) {
-				$.fn.smallMenu();
-			} else {
-				$masthead.find( '#site-navigation' ).removeClass( 'main-small-navigation' ).addClass( 'main-navigation' );
-				$masthead.find( '#site-navigation h3' ).removeClass( 'menu-toggle' ).addClass( 'assistive-text' );
-				$masthead.find( '.nav-menu' ).removeAttr( 'style' );
-			}
-		}, 200 );
-	} );
-        
-} );
+jQuery(document).ready(function($){
+	
+	//add .last to final menu item
+	$('.nav-menu li:last').addClass('last');
+});
