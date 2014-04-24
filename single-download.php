@@ -28,14 +28,7 @@ get_header(); ?>
                                                   
                                             </div> <!-- /.product-content -->
 
-                                            <footer class="product-meta">
-                                              
-                                                    <?php if(!edd_has_variable_prices($post->ID)) { ?>
-							<h4 class="single-product-price"><?php edd_price($post->ID); ?></h4>
-                                                    <?php } ?>		
-											
-                                                    <?php echo edd_get_purchase_link($post->ID, 'Add to Cart', 'button', 'blue'); ?>
-                                                    
+                                            <footer class="product-meta">   
                                                     <div class="product-categories">
                                                             <?php the_terms( $post->ID, 'download_category', '<span class="product-categories-title">Categories:</span> ', ', ', '' ); ?>
                                                     </div><!--end product-categories-->

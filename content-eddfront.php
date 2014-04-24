@@ -49,7 +49,7 @@ if (class_exists('Easy_Digital_Downloads')) {
                                             <?php if (function_exists('edd_price')) { ?>
                                             <div class="product-buttons">
                                                 
-                                                <a href="<?php the_permalink(); ?>" class="product-details-link">View Details</a>
+                                                <a href="<?php the_permalink(); ?>" class="product-details-link"><?php _e('View Details','tatva'); ?></a>
                                             </div><!--end .product-buttons-->
                 <?php } ?>
                                     </div> <!--end .home-product-info -->

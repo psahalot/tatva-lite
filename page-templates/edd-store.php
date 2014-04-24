@@ -49,14 +49,14 @@ get_header();
                                     </a>
                                     <div class="product-image">
                                         <a href="<?php the_permalink(); ?>">
-                                            <?php the_post_thumbnail('product-image'); ?>
+                                            <?php the_post_thumbnail('product-image-thumb'); ?>
                                         </a>
                                         <?php if (function_exists('edd_price')) { ?>
                                             <div class="product-price">
                                                 <?php
                                                 if (edd_has_variable_prices(get_the_ID())) {
                                                     // if the download has variable prices, show the first one as a starting price
-                                                    echo 'Starting at: ';
+                                                    _e('Starting at: ','tatva');
                                                     edd_price(get_the_ID());
                                                 } else {
                                                     edd_price(get_the_ID());
@@ -68,7 +68,7 @@ get_header();
                                     <?php if (function_exists('edd_price')) { ?>
                                         <div class="product-buttons">
                                             <?php if (!edd_has_variable_prices(get_the_ID())) { ?>
-                                                <?php echo edd_get_purchase_link(get_the_ID(), 'Add to Cart', 'button'); ?>
+                                                <?php echo edd_get_purchase_link(get_the_ID(), __('Add to Cart','tatva'), 'button'); ?>
                                             <?php } ?>
                                             <a href="<?php the_permalink(); ?>">View Details</a>
                                         </div><!--end .product-buttons-->
@@ -80,8 +80,8 @@ get_header();
 
                         <?php else : ?>
 
-                            <h2 class="center">Not Found</h2>
-                            <p class="center">Sorry, but you are looking for something that isn't here.</p>
+                            <h2 class="center"><?php esc_html_e( 'Nothing Found', 'tatva' ); ?></h2>
+                            <p class="center"><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'tatva' ); ?></p>
                             <?php get_search_form(); ?>
 
                         <?php endif; ?>
