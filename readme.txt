@@ -153,6 +153,7 @@ Free Software Foundation; either version 2 of the License, or (at your option) a
 
 Tatva utilises the following awesomeness:
 
+[Quark theme] is the base for Tatva Lite and Tatva Pro. Quark is developed by Anthony Hortin @maddisondesigns
 [Modernizr](http://modernizr.com), which is licensed under the MIT license
 [Normalize.css](https://github.com/necolas/normalize.css), which is licensed under the MIT license
 [jQuery Validation](http://bassistance.de/jquery-plugins/jquery-plugin-validation) which is dual licensed under the MIT license and GPL licenses
