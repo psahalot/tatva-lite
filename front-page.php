@@ -17,11 +17,6 @@
  */
 get_header();
 ?>
-
-<div id="bannercontainer">
-
-    <div class="banner row">
-
         <?php
         // Count how many banner sidebars are active so we can work out how many containers we need
 
@@ -38,6 +33,10 @@ get_header();
         // If there's one or more one active sidebars, create a row and add them
         if ($featuredSidebars > 0) {
             ?>
+
+        <div id="bannercontainer">
+
+            <div class="banner row">
             <?php
             // Work out the container class name based on the number of active banner sidebars
             $containerClass = "grid_" . 12 / $featuredSidebars . "_of_12";
@@ -54,12 +53,10 @@ get_header();
                 <?php }
             }
             ?>
+            </div> <!-- /.banner.row -->
 
+        </div> <!-- /#bannercontainer -->
 <?php } ?>
-
-    </div> <!-- /.banner.row -->
-
-</div> <!-- /#bannercontainer -->
 
 <?php
 // display front page widgets
