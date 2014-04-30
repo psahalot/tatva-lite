@@ -363,6 +363,8 @@ function tatva_scripts_styles() {
 	// Register and enqueue our icon font
 	// We're using the awesome Font Awesome icon font. http://fortawesome.github.io/Font-Awesome
 	wp_enqueue_style( 'fontawesome', trailingslashit( get_template_directory_uri() ) . 'assets/css/font-awesome.min.css' , array(), '4.0.3', 'all' );
+        
+        wp_enqueue_style( 'tatva-woocommerce', trailingslashit( get_template_directory_uri() ) . 'assets/css/tatva-woocommerce.css' , array(), '1.0', 'all' );
 
 	/*
 	 * Load our Google Fonts.
@@ -908,3 +910,64 @@ function tatva_filter_front_page_template( $template ) {
      return is_home() ? '' : $template ;
 }
 add_filter( 'frontpage_template', 'tatva_filter_front_page_template' );
+
+
+// Remove default WooCommerce styles
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+
+// Display 24 products per page. Goes in functions.php
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 9;' ), 20 );
+
+add_theme_support( 'woocommerce' );
+// Change number or products per row to 3
+add_filter('loop_shop_columns', 'loop_columns');
+if (!function_exists('loop_columns')) {
+	function loop_columns() {
+		return 3; // 3 products per row
+	}
+}
+
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
+
+
+/**
+ * Hook in on activation
+ */
+global $pagenow;
+if ( is_admin() && isset( $_GET['activated'] ) && $pagenow == 'themes.php' ) add_action( 'init', 'tatva_woocommerce_image_dimensions', 1 );
+ 
+/**
+ * Define image sizes
+ */
+function tatva_woocommerce_image_dimensions() {
+  	$catalog = array(
+		'width' 	=> '349',	// px
+		'height'	=> '349',	// px
+		'crop'		=> 1 		// true
+	);
+ 
+	$single = array(
+		'width' 	=> '362',	// px
+		'height'	=> '362',	// px
+		'crop'		=> 1 		// true
+	);
+ 
+	$thumbnail = array(
+		'width' 	=> '150',	// px
+		'height'	=> '150',	// px
+		'crop'		=> 0 		// false
+	);
+ 
+	// Image sizes
+	update_option( 'shop_catalog_image_size', $catalog ); 		// Product category thumbs
+	update_option( 'shop_single_image_size', $single ); 		// Single product image
+	update_option( 'shop_thumbnail_image_size', $thumbnail ); 	// Image gallery thumbs
+}
+
+
+
+
+
+function woocommerce_output_related_products() {
+woocommerce_related_products(6,3); // Display 4 products in rows of 3
+}

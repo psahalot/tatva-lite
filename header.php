@@ -72,6 +72,17 @@ global $edd_options;
                                 </a>
                             </span>
                             <?php } ?>
+                            
+                             <?php if (class_exists('woocommerce')) {
+                            global $woocommerce; ?>
+                            <ul class="woo-cart-total">
+                              <li>
+                              <a class="cart-contents" href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php esc_attr_e('View your shopping cart', 'tatva'); ?>">
+                                  <?php _e('Your Cart', 'tatva');?> (<?php echo sprintf(_n('%d', '%d', $woocommerce->cart->cart_contents_count, 'tatva'), $woocommerce->cart->cart_contents_count);?>)
+                              </a>
+                            </li>
+                          </ul>
+                         <?php } ?>
                             <?php dynamic_sidebar('header-widget'); ?>
                          </div><!-- /.header-extras -->
 		</header> <!-- /#masthead.site-header.row -->

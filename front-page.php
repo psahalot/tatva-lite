@@ -66,6 +66,9 @@ get_sidebar('front');
 // This has been done in parts for better code organization. 
 get_template_part('content', 'eddfront');
 
+// This has been done in parts for better code organization. 
+get_template_part('content', 'wooproducts');
+
 // Display featured posts on front page
 get_template_part('content', 'frontposts');
 

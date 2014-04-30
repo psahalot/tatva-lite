@@ -79,8 +79,8 @@ function tatva_customize_register($wp_customize) {
         'section' => 'tatva_theme_layout_settings',
         'type' => 'radio',
         'choices' => array(
-            'full-width' => __('Full Width', 'smartshop'),
-            'boxed' => __('Boxed', 'smartshop'),
+            'full-width' => __('Full Width', 'tatva'),
+            'boxed' => __('Boxed', 'tatva'),
         ),
     ));
 
@@ -255,6 +255,62 @@ function tatva_customize_register($wp_customize) {
         ));
     }
     
+    
+    /* ========================================================= */
+        // Add new section for Woocommerce featured products on Front Page
+        /* ========================================================= */
+         if (class_exists('woocommerce')) {
+        $wp_customize->add_section('tatva_woo_front_page_options', array(
+            'title' => __('Front Page Woo Products', 'tatva'),
+            'description' => __('Settings for displaying featured products on Front Page', 'tatva'),
+            'priority' => 60,
+        ));
+        // enable featured products on front page?
+        $wp_customize->add_setting('tatva_woo_front_featured_products', array('default' => 0,
+            'sanitize_callback' => 'tatva_sanitize_checkbox',
+            ));
+        
+        $wp_customize->add_control('tatva_woo_front_featured_products', array(
+            'label' => __('Show featured products on Front Page', 'tatva'),
+            'section' => 'tatva_woo_front_page_options',
+            'priority' => 10,
+            'type' => 'checkbox',
+        ));
+        // Front featured products section headline
+        $wp_customize->add_setting('tatva_woo_front_featured_title', array('default' => __('Latest Products', 'tatva'),
+            'sanitize_callback' => 'sanitize_text_field',
+            ));
+        
+        $wp_customize->add_control('tatva_woo_front_featured_title', array(
+            'label' => __('Main Title', 'tatva'),
+            'section' => 'tatva_woo_front_page_options',
+            'settings' => 'tatva_woo_front_featured_title',
+            'priority' => 10,
+        ));
+
+        // store front item count
+        $wp_customize->add_setting('tatva_woo_store_front_count', array('default' => 3,
+             'sanitize_callback' => 'tatva_sanitize_integer',
+            ));
+        $wp_customize->add_control('tatva_woo_store_front_count', array(
+            'label' => __('Number of products to display', 'tatva'),
+            'section' => 'tatva_woo_front_page_options',
+            'settings' => 'tatva_woo_store_front_count',
+            'priority' => 20,
+        ));
+        // sotre link text
+        $wp_customize->add_setting('tatva_woo_store_link_text', array('default' => __('Browse All Products', 'tatva'),
+            'sanitize_callback' => 'sanitize_text_field',
+            ));
+        
+        $wp_customize->add_control('tatva_woo_store_link_text', array(
+            'label' => __('Store Link Text', 'tatva'),
+            'section' => 'tatva_woo_front_page_options',
+            'settings' => 'tatva_woo_store_link_text',
+            'priority' => 30,
+        ));
+     }
+    
      // Add footer text section
     $wp_customize->add_section('tatva_footer', array(
         'title' => 'Footer Text', // The title of section
@@ -328,3 +384,51 @@ function tatva_header_output() {
 
 // Output custom CSS to live site
 add_action('wp_head', 'tatva_header_output');
+
+
+/*
+ * Sanitize numeric values 
+ * 
+ * @since Tatva 1.4
+ */
+function tatva_sanitize_integer( $input ) {
+    if( is_numeric( $input ) ) {
+    return intval( $input );
+    }
+}
+
+/*
+ * Escaping for input values
+ * 
+ * @since Tatva 1.4
+ */
+function tatva_sanitize_escaping( $input) {
+    $input = esc_attr( $input);
+    return $input;
+}
+
+
+/* 
+ * Sanitize Custom CSS 
+ * 
+ * @since Tatva 1.4
+ */
+
+function tatva_sanitize_custom_css( $input) {
+    $input = wp_kses_stripslashes( $input);
+    return $input;
+}	
+
+/*
+ * Sanitize Checkbox input values
+ * 
+ * @since Tatva 1.2
+ */
+function tatva_sanitize_checkbox( $input ) {
+    if ( $input ) {
+            $output = '1';
+    } else {
+            $output = false;
+    }
+    return $output;
+}
