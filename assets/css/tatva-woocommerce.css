@@ -1643,7 +1643,7 @@ div.pp_woocommerce #respond #commentform .comment-form-rating {
 .tatva-red .woocommerce ul.products li.product .onsale,
 .tatva-red .woocommerce #review_form #respond .form-submit input:hover,
 .tatva-red .onsale,
-.tatva-red ins
+.tatva-red ins,
 .tatva-red .woocommerce-page a.button:hover{
     background:#ef7a7a !important;
 }
