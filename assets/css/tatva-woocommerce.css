@@ -1577,7 +1577,7 @@ div.pp_woocommerce #respond #commentform .comment-form-rating {
     }
     .cart-collaterals .cross-sells {
         float: left;
-  
+        display:none;
     }
     .cart-collaterals .cross-sells ul.products li.product {
         width: 48%;
