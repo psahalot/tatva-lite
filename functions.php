@@ -969,5 +969,5 @@ function tatva_woocommerce_image_dimensions() {
 
 
 function woocommerce_output_related_products() {
-woocommerce_related_products(6,3); // Display 4 products in rows of 3
+woocommerce_related_products(4,4); // Display 4 products in rows of 3
 }

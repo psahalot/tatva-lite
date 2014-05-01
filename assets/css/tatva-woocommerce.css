@@ -525,7 +525,7 @@ ul.woocommerce_error {
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border-right: 0;
-    padding:0 1.4rem;
+    padding:0 1rem;
 }
 .quantity .number {
     float: left;
@@ -749,6 +749,11 @@ ul.products li.product .button.added:after {
 
 .single-product .woocommerce-tabs{
     clear:both;
+}
+
+.single-product ul.products li.product{
+    width:22.1%;
+    margin-right:3.85%;
 }
 .shipping_calculator h2 {
     font-size: 1.142em;
@@ -1223,9 +1228,6 @@ div.pp_woocommerce #respond #commentform .comment-form-rating {
     margin: 0;
 }
 
-.cart-collaterals .cross-sells {
-        display:none;
-    }
 
 /* ==========================================================================
    Woo Commerce Product 
@@ -1357,10 +1359,11 @@ div.pp_woocommerce #respond #commentform .comment-form-rating {
 
 .woocommerce button.button.alt{
     background:#fff;
-    border:1px solid #333;
+    border:3px solid #333;
     color:#333;
     font-weight:400;
     border-radius:0;
+    padding:.5rem 1.5rem;
 }
 
 .woocommerce button.button.alt:hover{
@@ -1574,7 +1577,7 @@ div.pp_woocommerce #respond #commentform .comment-form-rating {
     }
     .cart-collaterals .cross-sells {
         float: left;
-        display:none;
+  
     }
     .cart-collaterals .cross-sells ul.products li.product {
         width: 48%;
@@ -1615,7 +1618,12 @@ div.pp_woocommerce #respond #commentform .comment-form-rating {
         clear: both;
     }
 }
-
+@media only screen and (max-width: 767px) {
+.single-product ul.products li.product{
+        margin-right:0;
+        width:48%;
+    }
+}
 @media only screen and (max-width: 650px) {
     .woocommerce.full-width .main-content{
         padding:0 20px;
@@ -1623,7 +1631,7 @@ div.pp_woocommerce #respond #commentform .comment-form-rating {
 }
 @media only screen and (max-width: 520px) {
     ul.products li.product{
-        width:100%;
+        width:100% !important;
         float:none;
     }
 }
