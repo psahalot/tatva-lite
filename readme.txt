@@ -4,9 +4,22 @@ Author URI: http://ideaboxthemes.com
 Tags: black, gray, dark, light, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 3.6
 Tested up to: 3.9
-Stable tag: 1.0
+Stable tag: 1.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Tatva Lite WordPress Theme, Copyright (C) 2014 IdeaBox Themes
+Tatva Lite is distributed under the terms of the GNU GPL
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
 Tatva is a mobile responsive WordPress theme with support for Easy Digital Downloads plugin. So you can setup a simple business webiste or even integrate an online store for selling digital products. It incorporates multiple color schemes and layouts via Theme Customizer that are easy to modify, a set of common templates, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font.
 
@@ -143,7 +156,8 @@ Lastly, update the stylesheet header in style.css and either update or delete th
 
 == License ==
 
-Tatva is licensed under the [GNU General Public License version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
+Tatva Lite WordPress Theme is derived from Underscores WordPress Theme, Copyright 2013 Automattic, Inc.
+Tatva Lite WordPress Theme is distributed under the terms of the GNU GPL
 
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the
 Free Software Foundation; either version 2 of the License, or (at your option) any later version.
@@ -153,13 +167,28 @@ Free Software Foundation; either version 2 of the License, or (at your option) a
 
 Tatva utilises the following awesomeness:
 
-[Quark theme] is the base for Tatva Lite and Tatva Pro. Quark is developed by Anthony Hortin @maddisondesigns
-[Modernizr](http://modernizr.com), which is licensed under the MIT license
-[Normalize.css](https://github.com/necolas/normalize.css), which is licensed under the MIT license
-[jQuery Validation](http://bassistance.de/jquery-plugins/jquery-plugin-validation) which is dual licensed under the MIT license and GPL licenses
-[Font Awesome](http://fortawesome.github.io/Font-Awesome) icon font, which is licensed under SIL Open Font License and MIT License
-[Open Sans font](http://www.google.com/fonts/specimen/Open+Sans), which is licensed under SIL Open Font License 1.1
-[Montserrat font](http://www.google.com/fonts/specimen/Montserrat), which is licensed under SIL Open Font License 1.1
+Modernizr is licensed under the MIT license
+Source: http://modernizr.com
+
+Normalize.css Copyright Nicolas Gallagher 
+Normalize.css is licensed under the MIT license
+Source: https://github.com/necolas/normalize.css
+
+jQuery Validation Copyright 2013 Jorn Zaefferer 
+jQuery Validation is licensed under the MIT license
+Source: http://bassistance.de/jquery-plugins/jquery-plugin-validation
+
+Font Awesome Copyright Dave Gandy
+Font Awesome is licensed under the MIT license
+source: http://fortawesome.github.io/Font-Awesome
+
+Open Sans font Copyright Steve Metteson
+Open Sans font is licensed under Apache License 2.0
+source: http://www.google.com/fonts/specimen/Open+Sans
+
+Montserrat font Copyright Julieta Ulanovsky
+Montserrat font is licensed under SIL Open Font License 1.1
+source: http://www.google.com/fonts/specimen/Montserrat
 
 = 1.0 =
 - Initial version

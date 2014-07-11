@@ -48,7 +48,7 @@
     <div class="footer-wrap">
             <div class="row smallprint">
                 <p class="alignleft">
-                 <a href="<?php $my_theme = wp_get_theme(); echo $my_theme->get( 'AuthorURI' ); ?>">
+                 <a href="<?php $tatva_theme = wp_get_theme(); echo $tatva_theme->get( 'AuthorURI' ); ?>">
                     <?php _e('Tatva WordPress theme by IdeaBox','tatva'); ?>
                  </a>
              </p>  

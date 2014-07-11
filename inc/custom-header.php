@@ -29,9 +29,9 @@ function tatva_custom_header_setup() {
 		'height'                 => 300,
 		'width'                  => 800,
 
-		// Support flexible height and width.
-		'flex-height'            => true,
-		'flex-width'             => true,
+		// Support Flexible height and width.
+		'Flex-height'            => true,
+		'Flex-width'             => true,
 
 		// Random image rotation off by default.
 		'random-default'         => false,
