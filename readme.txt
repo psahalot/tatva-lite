@@ -23,14 +23,21 @@ GNU General Public License for more details.
 
 Tatva is a mobile responsive WordPress theme with support for Easy Digital Downloads plugin. So you can setup a simple business webiste or even integrate an online store for selling digital products. It incorporates multiple color schemes and layouts via Theme Customizer that are easy to modify, a set of common templates, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font.
 
+Stable tag: 1.5
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Tatva is a mobile responsive WordPress theme with support for WooCommerce Easy Digital Downloads plugin. So you can setup a simple business webiste or even integrate an online store. It incorporates multiple color schemes and layouts via Theme Customizer that are easy to modify, a set of common templates, support for WordPress Post Formats and the gorgeous, retina friendly Font Awesome icon font.
+
+
 
 == Description ==
 
 Tatva is a mobile responsive WordPress theme creating beautiful, responsive websites. It has been built only with
 required features and options. There are no confusing theme options and settings. Simply install and activate the theme.
 Front page is completely widgetized so it gives the users complete control over the content. 
-There's built in support for Easy Digital Downloads plugin which allows users to setup their online store and
-start selling digital products easily. 
+There's built in support for WooCommerce and Easy Digital Downloads plugin which allows users to setup their online store and
+start selling products easily. 
 
 It uses Theme customizer to implement all theme customization features. 
 as well as the gorgeous [Font Awesome](http://fortawesome.github.io/Font-Awesome/) icon font by Dave Gandy.
@@ -189,6 +196,9 @@ source: http://www.google.com/fonts/specimen/Open+Sans
 Montserrat font Copyright Julieta Ulanovsky
 Montserrat font is licensed under SIL Open Font License 1.1
 source: http://www.google.com/fonts/specimen/Montserrat
+
+= 1.5 = 
+- Added WooCommerce support
 
 = 1.0 =
 - Initial version
