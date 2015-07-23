@@ -289,7 +289,7 @@ a {
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -khtml-transition: all 0.5s ease;
-    -moz-transitiokn: all 0.5s ease;      
+    -moz-transition: all 0.5s ease;      
 }
 
 ul{
@@ -307,7 +307,7 @@ a:hover, a:active {
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -khtml-transition: all 0.5s ease;
-    -moz-transitiokn: all 0.5s ease;    
+    -moz-transition: all 0.5s ease;    
 }
 
 .alignleft {
@@ -825,7 +825,7 @@ select {
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -khtml-transition: all 0.3s ease;
-    -moz-transitiokn: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
 }
 
 .site-title img {
@@ -1117,7 +1117,7 @@ select {
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -khtml-transition: all 0.5s ease;
-    -moz-transitiokn: all 0.5s ease;    
+    -moz-transition: all 0.5s ease;    
 }
 
 .home-product-info:hover {
@@ -1125,7 +1125,7 @@ select {
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -khtml-transition: all 0.5s ease;
-    -moz-transitiokn: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
 }
 
 
@@ -1143,7 +1143,7 @@ select {
     border-radius: 0;
     font-size: 1.6rem;
     transition: all 0.5s ease;
-    -webki-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
     -khtml-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease; 
 }
@@ -1152,7 +1152,7 @@ select {
     background: #222146; 
     color: #fff; 
     transition: all 0.5s ease;
-    -webki-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
     -khtml-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease; 
 }
@@ -1270,7 +1270,7 @@ select {
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -khtml-transition: all 0.5s ease;
-    -moz-transitiokn: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
 }
 
 .feature-more-link:hover {
@@ -1278,7 +1278,7 @@ select {
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -khtml-transition: all 0.5s ease;
-    -moz-transitiokn: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
 }
 /* change site content width for pages without sidebar */
 
@@ -2452,7 +2452,7 @@ li span.dots {
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -khtml-transition: all 0.3s ease;
-    -moz-transitiokn: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
     padding:1rem 0;
 }
 
